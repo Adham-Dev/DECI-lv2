@@ -1,19 +1,21 @@
 import time
 import sys
 
+#Advanced de
+def delayedPrint(string, int):
+    print(string)
+    time.sleep(int)
+
+
 playerChoice = ""
 
-
-#Delay function
-# def delayedPrint(string):
-#     print(string)
-#     time.sleep(5)
 
 #Player choice
 def choice():
     global playerChoice
     playerChoice = input("Enter your choice (1 or 2):\n--> ")
     playerChoice = int(playerChoice)
+
 
 #Check player choice
 def check():
@@ -27,16 +29,9 @@ def check():
             choice()
 
 
-
-#Just making it more customizable
-def delayedPrint(string, int):
-    print(string)
-    time.sleep(int)
-
-
 #Animation function
 def animate():
-    for i in range(1,10):
+    for i in range(1,6):
         sys.stdout.write('\rGame is loading |')
         time.sleep(0.1)
         sys.stdout.write('\rGame is loading /')
@@ -46,16 +41,20 @@ def animate():
         sys.stdout.write('\rGame is loading \\')
         time.sleep(0.1)
     sys.stdout.write('\rGame loaded successfully!')
-    print(" ---------------------------- ")
-
+    time.sleep(1)
+    sys.stdout.write('\r ')
+    
 
 #Starting code
-delayedPrint("===== Welcome \"THE LOST ARTIFACT\" Game =====", 0.7)
-delayedPrint("== This game fully made py Adham ==", 1)
+delayedPrint("===== Welcome to \"TITAN'S HOLLOW QUEST\" Game =====", 0.7)
+delayedPrint("======== This game fully made py Adham ========", 1)
 print(" ")
 input("Press (Enter) to start game")
 delayedPrint("===================================", 1)
 
 
 animate()
+
+
+#Game:
 
